@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
     private Vector3 prevMousePos;
@@ -29,6 +29,14 @@ public class player : MonoBehaviour
 
             transform.position = newPosition;
             prevMousePos = Input.mousePosition;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            SceneManager.LoadScene("Game");
         }
     }
 }

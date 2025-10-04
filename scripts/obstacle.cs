@@ -18,6 +18,8 @@ public class obstacle : MonoBehaviour
 
     public void OnBecameInvisible()
     {
+
         Destroy(gameObject);
+        Debug.Log("Destroyed");
     }
 }

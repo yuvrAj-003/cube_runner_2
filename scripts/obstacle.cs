@@ -20,6 +20,5 @@ public class obstacle : MonoBehaviour
     {
 
         Destroy(gameObject);
-        Debug.Log("Destroyed");
     }
 }
